@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Suite de DEMONSTRATION : un seul test qui echoue volontairement (hors des 20 tests). -->
+<suite name="Suite_Demo_Echec_Volontaire" verbose="1">
+    <listeners>
+        <listener class-name="com.celectronix.tests.TestListener"/>
+    </listeners>
+    <test name="Demo_echec_volontaire">
+        <classes>
+            <class name="com.celectronix.tests.DemoFailureTest"/>
+        </classes>
+    </test>
+</suite>

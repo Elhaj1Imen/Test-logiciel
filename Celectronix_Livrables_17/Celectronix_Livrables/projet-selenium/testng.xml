@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite_Celectronix" verbose="1">
+
+    <listeners>
+        <listener class-name="com.celectronix.tests.TestListener"/>
+    </listeners>
+
+    <test name="Tests_fonctionnels_celectronix.com">
+        <classes>
+            <class name="com.celectronix.tests.CelectronixTests"/>
+        </classes>
+    </test>
+</suite>

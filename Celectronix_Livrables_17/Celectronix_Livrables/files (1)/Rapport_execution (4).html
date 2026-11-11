@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rapport d'exécution Celectronix</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1b1f24;--mu:#5b6573;--bd:#e2e5ea;--ok:#1a7f4b;--okb:#e3f4ea;--ko:#c0262d;--kob:#fbe7e8;--sk:#9a6700;--skb:#fff3d1;--ac:#1f5fbf}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171b;--card:#1d2127;--tx:#e8ebef;--mu:#9aa4b2;--bd:#2c323b;--ok:#4cc38a;--okb:#16342a;--ko:#ff7b82;--kob:#3a1c1f;--sk:#f0b73d;--skb:#3a2f12;--ac:#7fb0ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:24px;margin:0 0 4px}.sub{color:var(--mu);margin:0 0 20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px}
+.c .n{font-size:30px;font-weight:700;line-height:1.1}.c .l{color:var(--mu);font-size:13px}
+.ok .n{color:var(--ok)}.ko .n{color:var(--ko)}.sk .n{color:var(--sk)}
+.bar{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:0 0 20px;background:var(--bd)}
+.bar i{display:block}.bar .p{background:var(--ok);width:85.0%}.bar .f{background:var(--ko);width:10.0%}.bar .s{background:var(--sk);width:5.0%}
+.meta{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;margin-bottom:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px 20px;font-size:14px}
+.meta b{color:var(--mu);font-weight:600}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+button{font:inherit;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:8px;padding:6px 12px;cursor:pointer}
+button[aria-pressed=true]{border-color:var(--ac);color:var(--ac);font-weight:600}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--bd);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mu);background:var(--bg)}
+td.id{font-weight:700;white-space:nowrap}
+.b{display:inline-block;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:600}
+.b.passed{background:var(--okb);color:var(--ok)}.b.failed{background:var(--kob);color:var(--ko)}.b.skipped{background:var(--skb);color:var(--sk)}
+pre{margin:8px 0 0;padding:10px;background:var(--bg);border:1px solid var(--bd);border-radius:8px;white-space:pre-wrap;word-break:break-word;font:12.5px/1.45 ui-monospace,Consolas,monospace}
+tr[data-s=failed]{background:color-mix(in srgb,var(--kob) 35%,transparent)}
+.note{color:var(--mu);font-size:13px;margin-top:14px}
+@media(max-width:640px){th:nth-child(2),td:nth-child(2){display:none}}
+</style></head><body><main>
+<h1>Rapport d'exécution des tests fonctionnels</h1>
+<p class="sub">Site testé : https://www.celectronix.com/ · Projet Celectronix (TestNG + Selenium) · EL HAJ Imen, ISIL 3-1</p>
+<div class="cards">
+<div class="c"><div class="n">20</div><div class="l">Tests exécutés</div></div>
+<div class="c ok"><div class="n">17</div><div class="l">Passed (réussis)</div></div>
+<div class="c ko"><div class="n">2</div><div class="l">Failed (échoués)</div></div>
+<div class="c sk"><div class="n">1</div><div class="l">Skipped (ignorés)</div></div>
+</div>
+<div class="bar" role="img" aria-label="17 réussis, 2 échoués, 1 ignoré"><i class="p"></i><i class="f"></i><i class="s"></i></div>
+<div class="meta">
+<div><b>Date d'exécution :</b> 10/11/2026</div><div><b>Durée totale :</b> 3 min 38 s</div>
+<div><b>Suite :</b> CelectronixTests (testng.xml)</div><div><b>Navigateur :</b> Chrome 156 (Selenium WebDriver 4)</div>
+<div><b>Outils :</b> Java, Maven, TestNG, IntelliJ IDEA</div><div><b>Taux de réussite :</b> 85 %</div>
+</div>
+<div class="tools" role="group" aria-label="Filtrer">
+<button data-f="all" aria-pressed="true">Tous (20)</button><button data-f="passed" aria-pressed="false">Passed (17)</button>
+<button data-f="failed" aria-pressed="false">Failed (2)</button><button data-f="skipped" aria-pressed="false">Skipped (1)</button></div>
+<table><thead><tr><th>ID</th><th>Module</th><th>Test</th><th>Statut</th></tr></thead><tbody id="t">
+<tr data-s="passed"><td class="id">TC01</td><td>Accueil</td><td>Chargement de la page d&#x27;accueil</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="skipped"><td class="id">TC02</td><td>Panier</td><td>Code promo invalide refusé avec un message clair<pre>Aucun champ de code promo sur la page panier (test ignoré).</pre></td><td><span class="b skipped">Skipped</span></td></tr>
+<tr data-s="passed"><td class="id">TC03</td><td>Sécurité</td><td>HTTPS forcé et sans contenu mixte (accueil, connexion, panier)</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC04</td><td>Navigation</td><td>Navigation vers une catégorie</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC05</td><td>Recherche</td><td>Recherche par libellé ou référence exacte (ESP32, Arduino Uno, Capteur DHT11, 59-03213)</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC06</td><td>Recherche</td><td>Recherche d&#x27;un produit inexistant, puis recherche vide</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC07</td><td>Sécurité</td><td>Page d&#x27;erreur propre (404) sans trace technique</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC08</td><td>Recherche</td><td>Affichage de la liste de résultats</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC09</td><td>Fiche produit</td><td>Ouverture d&#x27;une fiche produit (titre et prix visibles)</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC10</td><td>Catalogue</td><td>Ouverture d&#x27;une page de catégorie par son adresse</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="failed"><td class="id">TC11</td><td>Panier</td><td>Ajout au panier et cohérence du prix (prix supérieur à 0)<pre>java.lang.AssertionError: ANOMALIE : produit affiché à 0.0 TND avec un bouton &#x27;Ajouter au panier&#x27; actif : https://www.celectronix.com/pieces-detachees-electromenager/9852-xmsr00112-moteur-de-distributeur-d-additifs-pour-lave-linge-chargement-par-le-haut.html
+Expected :true / Actual :false
+at com.celectronix.tests.CelectronixTests.tc11_addToCart(CelectronixTests.java:170)
+Anomalie liée : AN-01</pre></td><td><span class="b failed">Failed</span></td></tr>
+<tr data-s="failed"><td class="id">TC12</td><td>Panier</td><td>Le produit apparaît dans le panier avec une devise cohérente (TND)<pre>java.lang.AssertionError: ANOMALIE : devises mélangées dans le panier (montants en TND et message de livraison en DT)
+Expected :false / Actual :true
+at com.celectronix.tests.CelectronixTests.tc12_cartContainsProduct(CelectronixTests.java:185)
+Anomalie liée : AN-03</pre></td><td><span class="b failed">Failed</span></td></tr>
+<tr data-s="passed"><td class="id">TC13</td><td>Panier</td><td>Quantité : avertissement de stock, quantité modifiable, valeur -1 refusée</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC14</td><td>Panier</td><td>Suppression d&#x27;un produit du panier</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC15</td><td>Compte</td><td>Affichage de la page de connexion</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC16</td><td>Compte</td><td>Connexion avec identifiants invalides</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC17</td><td>Compte</td><td>Inscription avec données invalides</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC18</td><td>Contact</td><td>Formulaire de contact avec données invalides</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC19</td><td>Navigation</td><td>Pied de page : les liens utiles fonctionnent</td><td><span class="b passed">Passed</span></td></tr>
+<tr data-s="passed"><td class="id">TC20</td><td>Catalogue</td><td>Tri des produits par prix croissant</td><td><span class="b passed">Passed</span></td></tr>
+</tbody></table>
+<p class="note">Les deux tests échoués détectent de vraies anomalies du site (AN-01 : produit à 0,000 TND avec bouton « Ajouter au panier » actif ; AN-03 : devises TND et DT mélangées dans le panier). Voir 12_Fiche_des_anomalies. Les captures d'écran (PNG) et traces d'exception (TXT) des tests échoués sont générées dans les dossiers <code>screenshots/</code> et <code>errors/</code>.</p>
+</main>
+<script>
+document.querySelectorAll('.tools button').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.tools button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+var f=b.dataset.f;document.querySelectorAll('#t tr').forEach(function(r){r.style.display=(f==='all'||r.dataset.s===f)?'':'none'});})});
+</script></body></html>

@@ -1,0 +1,24 @@
+CELECTRONIX - MINI-PROJET TESTNG + SELENIUM
+===========================================
+
+AVANT D'OUVRIR LE PROJET
+1. Copiez tout le dossier "Celectronix_Livrables" dans un chemin SIMPLE, sans espace ni parenthese,
+   par exemple  D:\projets\Celectronix_Livrables   (evitez "Telechargements", "(1)", "(6)"...).
+2. Installez un JDK 17 ou 21 (java -version doit fonctionner).
+
+OUVRIR DANS INTELLIJ
+1. File > Open > choisir le dossier  projet-selenium  (celui qui contient pom.xml). Valider "Trust Project".
+2. File > Project Structure > Project : SDK = JDK 17 ou 21.
+3. Panneau Maven (a droite) > icone "Reload All Maven Projects". Attendre la fin du telechargement.
+4. Clic droit sur testng.xml > Run  (ou Maven > Lifecycle > clean puis test).
+
+SI "package org.openqa.selenium does not exist" : refaire l'etape 3 (rechargement Maven).
+
+EN TERMINAL (sans installer Maven) : dans le dossier projet-selenium
+   Windows :  mvnw.cmd clean test
+   Test de demonstration (echec volontaire) :  mvnw.cmd test -Pdemo
+
+CONTENU
+  1_Cahier_des_charges.docx    2_Plan_de_test.docx    3_Cahier_de_tests.xlsx    11_Rapport_final.pdf / .docx
+  projet-selenium/  = livrables 4 a 10 (projet Maven, testng.xml, tests Java, jeux de donnees CSV, README.md)
+  Rapport d'execution, captures et traces : crees dans projet-selenium/reports, screenshots, errors apres execution.

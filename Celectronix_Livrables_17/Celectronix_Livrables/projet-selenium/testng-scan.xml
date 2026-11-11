@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Outil d'exploration (hors des 20 tests) : cherche des anomalies sur les categories du site. -->
+<suite name="Suite_Scan_Anomalies" verbose="1">
+    <listeners>
+        <listener class-name="com.celectronix.tests.TestListener"/>
+    </listeners>
+    <test name="Scan_anomalies">
+        <classes>
+            <class name="com.celectronix.tests.AnomalyScanTest"/>
+        </classes>
+    </test>
+</suite>

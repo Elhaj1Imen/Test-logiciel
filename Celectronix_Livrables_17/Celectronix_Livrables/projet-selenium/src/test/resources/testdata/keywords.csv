@@ -1,0 +1,13 @@
+test,keyword
+TC05,ESP32
+TC05,Arduino Uno
+TC05,Capteur DHT11
+TC05,59-03213
+TC08,capteur
+TC09,moteur
+TC10,carte
+TC11,relais
+TC12,cable
+TC13,pompe
+TC14,alimentation
+TC20,ecran
